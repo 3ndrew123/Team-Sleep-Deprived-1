@@ -8,6 +8,29 @@
  * @implements {HTMLElement}
  * WalletInfo custom component. This contains the custom component definition for wallet-info.
  */
+
+/**
+ * E2E Testing for the Wallets Page
+ * Wallets Page should include the following
+ */
+ describe('Basic user flow for Wallets', () => {
+    // First, visit the lab 8 website
+    beforeAll(async () => {
+      await page.goto('https://cse110-expensetracker.netlify.app/source/html/wallets.html');
+    });
+
+    // Test that only up to 6 wallets are displayed and stored
+    it('Testing that only 6 wallets are available and displayed', async () => {
+        const numWallets = await page.$$eval('wallet-info', (walletItems) => {
+            return walletItems.length;
+        });
+
+        let numWalletsValid = numWallets < 6;
+        
+        expect(numWalletsValid).toBe(true);
+    });
+
+});
 class WalletInfo extends HTMLElement {
 	/** 
 	* @constructs WalletInfo
