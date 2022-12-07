@@ -90,7 +90,7 @@ Team Lead, General frontend/backend development
   <img alt="Shuo Wang" style="float: right;" src="branding/profile-pictures/pfp-shuowang.png" height=175 width=175> 
 </p> 
 
-Hi my name is Shuo Wang, a computer science major student at UCSD. I love watercolor and I paint a lot.
+Worked on frontend/backend functionalities on different pages.
 <br><br>
 
 
