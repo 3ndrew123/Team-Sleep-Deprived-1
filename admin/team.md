@@ -30,7 +30,7 @@ Here at **Team Sleep Deprived**, we strive to make clean and effective software 
   <img alt="Anthony Chen" style="float: left;" src="branding/profile-pictures/pfp-anthonychen.jpg" height=175 width=175> 
 </p>
 
-My name is Anthony and I'm a third year computer science student who enjoys playing soccer, volleyball, and violin. I dislike middles in volleyball, left-backs in soccer, and violists in orchestra despite having been all three in the past myself.
+Worked on the CI/CD and front end/backend features. (humor) Also is the team’s public relations manager
 <br><br>
 
 
@@ -40,7 +40,7 @@ My name is Anthony and I'm a third year computer science student who enjoys play
   <img alt="Michael Phung" style="float: right;" src="branding/profile-pictures/pfp-michaelphung.jpg" height=175 width=175> 
 </p>
 
-Hello. My name is Michael Phung and I am a 4th year student studying Mathematics - Computer Science. My main hobbies include games, volleyball, and chess. An interesting fact about me is that I am left-handed but I write with my right hand.
+Created Github issues for backend functionality and worked on front end/backend for wallet details.
 <br><br>
 
 
@@ -50,7 +50,7 @@ Hello. My name is Michael Phung and I am a 4th year student studying Mathematics
   <img alt="Andrew Lu" style="float: right;" src="branding/profile-pictures/pfp-andrewlu.jpg" height=175 width=175> 
 </p>
 
-I'm Andrew Lu, a third year Computer Engineering Major in ERC born and raised in SoCal. My favorite hobbies, by far, are eating and sleeping. Looking forward to becoming a better software engineer this quarter.
+Researched unit and snapshot testing and presented phases of the CI/CD pipeline. Worked on database functionality and its integration with the back-end.
 <br><br>
 
 
@@ -60,7 +60,7 @@ I'm Andrew Lu, a third year Computer Engineering Major in ERC born and raised in
   <img alt="Andrew Nguyen" style="float: right;" src="branding/profile-pictures/pfp-andrewnguyen.jpg" height=175 width=175> 
 </p> 
 
-Hello, my name is Andrew Nguyen and I am a 3rd year Computer Science Major from Sixth College! I am in group 27 Team Sleep Deprived and I hope to create a successful and memorable project with my team. Some things I like to do in my free time is swim, build keyboards, and read manga!
+General frontend/backend development
 <br><br>
 
 
@@ -70,7 +70,7 @@ Hello, my name is Andrew Nguyen and I am a 3rd year Computer Science Major from 
   <img alt="Javier Zunga" style="float: right;" src="branding/profile-pictures/pfp-javierzuniga.png" height=175 width=175> 
 </p> 
 
-Hello, my name is Javier and I am a Computer Science Major from San Diego/Tijuana! I am interested in the fields of immigration, research, artificial intelligence, game design, and education. My favorite coding language is C++ and I love going to concerts, festivals, raves, and anything music related.
+General Frontend/backend development
 <br><br>
 
 
@@ -80,7 +80,7 @@ Hello, my name is Javier and I am a Computer Science Major from San Diego/Tijuan
   <img alt="Kevin Chang" style="float: right;" src="branding/profile-pictures/pfp-kevinchang.jpg" height=175 width=175> 
 </p> 
 
-Hi! I am Kevin Chang. I am a senior majoring in Computer Engineering. One of my favorite things is road trips! I enjoy the feeling when driving the car which makes me feel that I am connected to the land (I know it sounds pretty weird haha).
+Team Lead, General frontend/backend development
 <br><br>
 
 
@@ -100,7 +100,7 @@ Hi my name is Shuo Wang, a computer science major student at UCSD. I love waterc
   <img alt="Abigail Koornwinder" style="float: right;" src="branding/profile-pictures/pfp-abigailkoornwinder.jpg" height=175 width=175> 
 </p> 
 
-Hi I'm Abigail Koornwinder and I'm a fourth year studying Cognitive Science Machine Learning and Neural Computation, and minoring in Computer Science. I am from Santa Clara, CA and I enjoy swimming and reading by the beach.
+Worked on the frontend/backend of various pages and also responsible for documenting team notes.
 <br><br>
 
 
@@ -110,7 +110,7 @@ Hi I'm Abigail Koornwinder and I'm a fourth year studying Cognitive Science Mach
   <img alt="Ashwin Alagiri-Rajan" style="float: right;" src="branding/profile-pictures/pfp-ashwinalagiri.jpg" height=175 width=175> 
 </p>
 
-I’m a Junior Computer Engineering student. I’m an international student from Qatar! I’ll be the team lead for Team Sleep Deprived (Team 27).
+Team Lead, created the front end, the backend, the repo, and the team structure, and the templates for collaborating on github.
 <br><br>
 
 
@@ -120,7 +120,7 @@ I’m a Junior Computer Engineering student. I’m an international student from
   <img alt="Jacob Graven" style="float: right;" src="branding/profile-pictures/pfp-jacobgraven.jpg" height=175 width=175> 
 </p> 
 
-Hello my name is Jacob (Jake) Graven. I was born and raised in San Diego and I am currently a third year computer science major at UCSD. I enjoy rock climbing and I absolutely love cats.
+ General Frontend/backend development
 <br>
 
 
