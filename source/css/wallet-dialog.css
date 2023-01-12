@@ -1,3 +1,6 @@
+/**
+ * @author Ashwin Rohit Alagiri Rajan
+ */
 .form-container {
     width: 300px;
     padding: 10px;
@@ -11,7 +14,7 @@
 }
 
 .form-popup {
-    display: none; /*Have form be hidden */
+    display: none;
     position: absolute;
     top: 30%;
     left: calc(50% - 150px);

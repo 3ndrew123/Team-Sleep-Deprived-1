@@ -29,6 +29,7 @@
 
 import { getAllUsersObject, setAllUsersObject } from './database.js';
 
+
 /**
  * Sets the global username object for the currently logged in user
  * @param {String} username
@@ -44,6 +45,38 @@ function setCurrentUsername(username) {
 function getCurrentUsername() {
 	return localStorage.getItem('currentUsername');
 }
+
+/**
+ * This function checks if the user is logged in for the current page, then if the user is not logged in, it redirects the user to the login page.
+ */
+async function checkIfUserIsLoggedIn() {
+	// check that the current page is not the signup page
+	if (window.location.href.includes('signup.html') || window.location.href.includes('login.html')) {
+		return;
+	}
+	// check if the user is logged in
+	const currentUsername = getCurrentUsername();
+	if (!currentUsername) {
+		window.location.replace('../html/login.html');
+	}
+}
+
+checkIfUserIsLoggedIn();
+
+/**
+ * Shows the username of the current user near the logout button with a greeting.
+ * @returns The current user object
+ */
+async function setUserNameForLogoutButton() {
+	const logoutDiv = document.querySelector('.user-logout');
+	const username = getCurrentUsername();
+	if(!username) {
+		return;
+	}
+	logoutDiv.querySelector('.username').innerHTML = `<em>Hi, ${username}!</em>`;
+}
+
+setUserNameForLogoutButton();
 
 let currentUserSet = false;
 let currentUser = {};
@@ -95,11 +128,15 @@ async function setCurrentUserWallets(wallets) {
 	updateCurrentUser();
 }
 
+/**
+ * Resets the global variables to their default values. Used when the user logs out.
+ */
 async function resetGlobalInfo() {
 	currentUserSet = false;
 	currentUser = {};
 	setCurrentUsername('');
 	localStorage.removeItem('currentWalletName');
+	localStorage.removeItem('rememberme');
 }
 
 export { getAllUsersObject, setAllUsersObject, setCurrentUsername, getCurrentUsername, getCurrentUser, updateCurrentUser, getCurrentUserWallets, setCurrentUserWallets, resetGlobalInfo };

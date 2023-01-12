@@ -1,3 +1,6 @@
+/**
+ * @author Ashwin Rohit Alagiri Rajan
+ */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&display=swap');
@@ -51,10 +54,7 @@ body {
     background-image: var(--default-background-image);
     background-position: -3px -3px;
     height: 100%;
-	overflow: hidden;
-	-moz-transform: scale(0.8, 0.8); /* Moz-browsers */
-    zoom: 0.8; /* Other non-webkit browsers */
-    zoom: 80%; /* Webkit browsers */
+    overflow: hidden;
 }
 
 .page-header {
@@ -78,10 +78,22 @@ body {
     scale: var(--logout-button-scaling);
     display: flex;
     border: var(--temp-border-style);
+	border-radius: 100px;
+	padding: 12px;
 }
 
 .logout-button:hover {
     cursor: pointer;
+	border: 5px solid rgb(234, 94, 96);
+	padding: 7px;
+	border-radius: 100px;
+	scale: 0.55;
+	transition: all .2s ease;
+}
+
+.user-logout {
+	display: flex;
+	align-items: center;
 }
 
 .navbar {

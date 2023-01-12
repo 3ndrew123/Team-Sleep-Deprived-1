@@ -1,6 +1,9 @@
+/**
+ * @author Ashwin Rohit Alagiri Rajan
+ */
 .user-settings {
     width: 700px;
-    margin: 1rem auto;
+    margin: 2.5rem auto;
 }
 
 .settings-title {
@@ -37,6 +40,11 @@
     font-size: 2rem;
 }
 
+.password-input-field:focus {
+	outline: none;
+	border-color: #333;
+}
+
 .default-page-chooser {
     background-color: none;
     padding: 1rem;
@@ -45,6 +53,15 @@
     font-family: inherit;
     font-size: 1.2rem;
     width: 30%;
+}
+
+.default-page-chooser:focus {
+	outline: none;
+	border-color: #333;
+}
+
+.default-page-chooser:hover {
+	cursor: pointer;
 }
 
 .button-holder {
@@ -72,5 +89,5 @@
 }
 
 #reset-button {
-    background-color: rgba(150, 0, 0, 0.5);
+    background-color: #ea918f;
 }

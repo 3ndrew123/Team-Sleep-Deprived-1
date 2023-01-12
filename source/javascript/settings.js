@@ -2,7 +2,9 @@
  * Handles all of the changes to user settings such as
  * changing default page and changing password
  * 
- * @author: Andrew Nguyen/Shuo Wang
+ * @author Andrew Nguyen
+ * @author Shuo Wang
+ * @contributor Ashwin Rohit Alagiri Rajan
  */
 
 // Imports useful functions from other files
@@ -37,7 +39,6 @@ function disableButtons() {
 	if (dropDown.options[dropDown.selectedIndex].value == 'dashboard') {
 		resetSettings.style.opacity = 0.5;
 		resetSettings.disabled = true;
-
 	}
 }
 disableButtons();
@@ -159,16 +160,15 @@ saveSettings.addEventListener('click', function() {
 
 		updateCurrentUser(currentUser);
 		
-		saveSettings.textContent = 'Saved!';
+		// change the text of button to saved with an animation
+		saveSettings.innerHTML = 'Saved!';
 		saveSettings.style.opacity = 0.5;
 		saveSettings.disabled = true;
 
 		window.setTimeout(() => {
 			saveSettings.textContent = 'Save';
-		}, 500)
-
-		// window.location.reload();
-
+			window.location.reload();
+		}, 1000);
 	}
 	// catches any errors
 	catch (err) {
@@ -183,7 +183,6 @@ saveSettings.addEventListener('click', function() {
 resetSettings.addEventListener('click', function() {
 	currentUser['preferred-default-page'] = 0;
 	updateCurrentUser(currentUser);
-	//alert("Reset Default Page to Dashboard!");
 	window.location.reload();
 });
 

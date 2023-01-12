@@ -1,49 +1,35 @@
+/**
+ * @author Ashwin Rohit Alagiri Rajan
+ * @contributor Anthony Chen
+ * @fileoverview This file contains functions that will initialize the dashboard page with the add transactions form and the recent transactions table
+ */
 import { getCurrentUserWallets, setCurrentUserWallets } from './globals.js';
 import { getTransactionsSortedByDate } from './TransactionFilter.js';
 const MAX_TRANSACTIONS = 10;
-var recentActivity;
+let recentActivity;
 
-//console.log(await getCurrentUserWallets());
 /**
- * Initializes the recent activity window
+ * This refreshes the recent transactions table when an event such as adding a new transactions occurs 
  */
-function initRecent(){
+async function refreshTransactions() {
 	recentActivity = document.createElement('rec-act');
-	//recentActivity.data =  JSON.stringify([{'name':'No recent ', 'amount':'-10', 'wallet':'walletname'}]);
-	
 	let container = document.getElementsByClassName('flex-container')[0];
+	if (container.lastChild.tagName === 'REC-ACT') {
+		container.removeChild(container.lastChild);
+	}
 	container.appendChild(recentActivity);
-	refreshTransactions();
-}
-
-/**
- * Refreshes the transactions displayed on the dashboard
- */
-async function refreshTransactions(){
-	let transactions = displayRecentTransactions(await getTransactionsSortedByDate(), MAX_TRANSACTIONS);
-	// console.log(transactions);
+	let transactions = await getTransactionsSortedByDate();
+	// if there are no transactions, display that there are no transactions instead of the table
+	if(transactions.length <= 0){
+		recentActivity.shadowRoot.querySelector('.recent-activity-box').innerHTML = '<div class="no-transactions-filler"><h3> No Transactions To Display </h3></div><style>.no-transactions-filler { display: flex; width: 100%; justify-content: center; align-items: center; height: 100%; } </style>';
+		return;
+	}
 	recentActivity.data = JSON.stringify(transactions);
 }
 
-
 /**
- * 
- * @param {Array<Object>} transactions 
- * @param {Int} amount 
- * @returns recent 'amount' of transactions
+ * This function initializes the dashboard page by adding the add transactions form and the recent transactions table
  */
-function displayRecentTransactions(transactions, amount){
-	let recentTransactions = [];
-	for(let i = 0; i < amount; i++){
-		//If therte are no more transactions to display
-		if(i >= transactions.length){
-			return recentTransactions;
-		}
-		recentTransactions.push(transactions[i]);
-	}
-	return recentTransactions;
-}
-
 async function initDashboard() {
 	const wallets = await getCurrentUserWallets();
 	const flexContainer = document.querySelector('.flex-container');
@@ -51,9 +37,13 @@ async function initDashboard() {
 	addTransaction.data = wallets;
 	addTransaction.shadowRoot.querySelector('form').addEventListener('submit', addTransactionEventHandler);
 	flexContainer.appendChild(addTransaction);
-	initRecent();
+	refreshTransactions();
 }
 
+/**
+ * This handles the add transaction event by adding the transaction to the database and refreshing the recent transactions table
+ * @param {Event} event 
+ */
 async function addTransactionEventHandler(event) {
 	event.preventDefault();
 	const form = event.target;
@@ -86,6 +76,6 @@ async function addTransactionEventHandler(event) {
 	}, 2000);
 
 	form.reset();
+	refreshTransactions();
 }
 initDashboard();
-
